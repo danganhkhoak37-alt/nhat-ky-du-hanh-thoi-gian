@@ -1,0 +1,371 @@
+/* ============================================================
+   TIMELINE.CSS — Dòng Thời Gian Cuộn Dọc Toàn Bộ (Full Screen Slides)
+   ============================================================ */
+
+.timeline-phase {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* ============================================================
+   PHẦN CHUNG: CẤU TRÚC PHẦN CHỨA (Phase 1, 2, 3)
+   ============================================================ */
+
+.vertical-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================================
+   PHASE HEADER INTRO SLIDES
+   ============================================================ */
+
+.phase-header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    background-color: var(--bg-void);
+    z-index: 5;
+    background: radial-gradient(circle at center, rgba(15, 31, 61, 0.35) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.phase-header::after {
+    content: '↓ Cuộn tiếp để khám phá các sự kiện';
+    position: absolute;
+    bottom: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    animation: pulseScroll 2s infinite;
+}
+
+@keyframes pulseScroll {
+    0%, 100% { 
+        opacity: 0.4; 
+        transform: translate(-50%, 0); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: translate(-50%, 10px); 
+    }
+}
+
+/* ============================================================
+   EVENT SLIDE: CẤU TRÚC 50/50 FULL SCREEN
+   ============================================================ */
+
+.event-slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    background-color: var(--bg-void);
+}
+
+.event-slide.left {
+    flex-direction: row;
+}
+
+.event-slide.right {
+    flex-direction: row-reverse;
+}
+
+/* Cột hình ảnh */
+.event-slide-image {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.event-slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) contrast(1.05);
+    transition: transform var(--transition-slow);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.event-slide.left .image-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 90%, #000000 100%);
+}
+
+.event-slide.right .image-overlay {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 90%, #000000 100%);
+}
+
+/* Cột nội dung */
+.event-slide-content {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 6rem;
+    z-index: 2;
+    background-color: #000000;
+}
+
+/* Ambient glow đằng sau text card */
+.event-slide-content::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, var(--accent-color) 0%, rgba(0, 0, 0, 0) 70%);
+    opacity: 0.08;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.event-slide-content-inner {
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Meta badges */
+.event-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.event-icon-badge {
+    font-size: 2.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.event-date-badge {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    background: rgba(245, 158, 11, 0.08);
+    padding: 0.5rem 1.25rem;
+    border-radius: 30px;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Tiêu đề & Mốc năm */
+.event-slide-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-weight: 850;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin: 0;
+    position: relative;
+    padding-bottom: 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.event-slide-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color, var(--accent-gold));
+    border-radius: 2px;
+    box-shadow: 0 0 12px var(--accent-color, var(--accent-gold));
+}
+
+.event-slide-year {
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0.4rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    align-self: flex-start;
+}
+
+.event-slide-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+/* ============================================================
+   SỰ KHÁC BIỆT CỦA CÁC GIAI ĐOẠN (Backgrounds)
+   ============================================================ */
+
+.phase1-section {
+    background-color: var(--bg-void);
+    padding-bottom: 0;
+}
+
+.phase2-section {
+    background-color: var(--bg-deep);
+    padding-bottom: 0;
+}
+
+.phase3-section {
+    background-color: var(--bg-void);
+    min-height: 100vh;
+}
+
+/* ============================================================
+   GIAI ĐOẠN 3: LỊCH SỬ HIỆN ĐẠI (GIÂY CUỐI CÙNG)
+   ============================================================ */
+
+.event-slide.last-second .event-slide-content {
+    background: linear-gradient(135deg, #020617 0%, #08111e 100%);
+    border-left: 2px solid rgba(245, 158, 11, 0.3);
+}
+
+.sub-events-list {
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    max-height: 220px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Custom scrollbar cho danh sách phụ */
+.sub-events-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.sub-events-list::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+
+.sub-events-list::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+}
+
+.sub-event-item {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.sub-event-item strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.sub-event-item span {
+    font-family: var(--font-mono);
+    color: var(--accent-gold);
+    font-size: 0.72rem;
+    margin-top: 0.15rem;
+}
+
+/* ============================================================
+   RESPONSIVE DESIGN (Thiết bị di động & Tablet)
+   ============================================================ */
+
+@media (max-width: 992px) {
+    .event-slide {
+        flex-direction: column !important;
+        height: 100vh;
+    }
+
+    .event-slide-image {
+        width: 100% !important;
+        height: 45vh !important;
+    }
+
+    .event-slide-content {
+        width: 100% !important;
+        height: 55vh !important;
+        padding: 2.5rem 2rem !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        overflow-y: auto;
+    }
+
+    .event-slide-content-inner {
+        max-width: 100%;
+        gap: 1.25rem;
+    }
+
+    .event-slide-title {
+        font-size: 1.8rem;
+    }
+
+    .event-slide.left .image-overlay,
+    .event-slide.right .image-overlay {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.6) 75%, #000000 100%) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-slide-image {
+        height: 40vh !important;
+    }
+
+    .event-slide-content {
+        height: 60vh !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .event-icon-badge {
+        width: 52px;
+        height: 52px;
+        font-size: 1.8rem;
+    }
+
+    .event-slide-title {
+        font-size: 1.5rem;
+    }
+
+    .sub-events-list {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,310 @@
+/* ============================================================
+   INDEX.CSS — Design System & Global Styles
+   Nhật Ký Du Hành Thời Gian
+   ============================================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+    /* Colors — Deep Space Palette */
+    --bg-void: #000000;
+    --bg-deep: #050a18;
+    --bg-space: #0a1628;
+    --bg-nebula: #0f1f3d;
+    --bg-card: rgba(15, 23, 42, 0.7);
+    --bg-card-hover: rgba(25, 35, 60, 0.85);
+
+    /* Accent Colors */
+    --accent-gold: #f59e0b;
+    --accent-gold-bright: #fbbf24;
+    --accent-orange: #ff6b35;
+    --accent-red: #ef4444;
+    --accent-blue: #3b82f6;
+    --accent-blue-light: #60a5fa;
+    --accent-purple: #8b5cf6;
+    --accent-purple-light: #a78bfa;
+    --accent-green: #10b981;
+    --accent-green-light: #34d399;
+    --accent-pink: #ec4899;
+    --accent-cyan: #06b6d4;
+
+    /* Text */
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --text-accent: var(--accent-gold);
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, #f59e0b, #f97316);
+    --gradient-cosmic: linear-gradient(135deg, #8b5cf6, #3b82f6, #06b6d4);
+    --gradient-fire: linear-gradient(135deg, #ef4444, #f59e0b);
+    --gradient-nebula: linear-gradient(135deg, #1e1b4b, #312e81, #3b0764);
+
+    /* Typography */
+    --font-display: 'Orbitron', sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    /* Sizing */
+    --section-padding: clamp(2rem, 5vw, 6rem);
+    --container-max: 1200px;
+    --card-radius: 16px;
+    --card-radius-sm: 10px;
+
+    /* Transitions */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --transition-fast: 200ms var(--ease-out-expo);
+    --transition-base: 400ms var(--ease-out-expo);
+    --transition-slow: 800ms var(--ease-out-expo);
+
+    /* Glassmorphism */
+    --glass-bg: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(148, 163, 184, 0.1);
+    --glass-blur: 20px;
+
+    /* Z-index layers */
+    --z-nav: 1000;
+    --z-hero-content: 10;
+    --z-canvas: 1;
+}
+
+/* ---- Reset & Base ---- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-void);
+    color: var(--text-primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-void);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-purple);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-purple-light);
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+a {
+    color: var(--accent-blue-light);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+a:hover {
+    color: var(--accent-gold);
+}
+
+strong {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+/* ---- Common Section Styles ---- */
+.section-heading {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    text-align: center;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.heading-accent {
+    font-size: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent-gold);
+    font-weight: 500;
+}
+
+/* Phase Headers */
+.phase-header {
+    text-align: center;
+    padding: var(--section-padding) 2rem 2rem;
+    position: relative;
+}
+
+.phase-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--accent-gold);
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+
+.phase-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    background: var(--gradient-cosmic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.phase-months {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+}
+
+/* ---- Quick Navigation ---- */
+.quick-nav {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: var(--z-nav);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    pointer-events: none;
+}
+
+.quick-nav.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav-dot {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-dot-inner {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    transition: all var(--transition-fast);
+    box-shadow: 0 0 0 2px transparent;
+}
+
+.nav-dot:hover .nav-dot-inner,
+.nav-dot.active .nav-dot-inner {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-gold);
+    box-shadow: 0 0 12px var(--accent-gold), 0 0 0 2px rgba(245, 158, 11, 0.3);
+}
+
+.nav-label {
+    position: absolute;
+    right: calc(100% + 12px);
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateX(8px);
+    transition: all var(--transition-fast);
+    pointer-events: none;
+}
+
+.nav-dot:hover .nav-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ---- Utility Classes ---- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Selection Style ---- */
+::selection {
+    background: rgba(245, 158, 11, 0.3);
+    color: var(--text-primary);
+}
+
+/* ---- Mobile Adjustments ---- */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .quick-nav {
+        right: 0.75rem;
+        gap: 1rem;
+    }
+
+    .nav-label {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}

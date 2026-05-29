@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhật Ký Du Hành Thời Gian | 13.8 Tỷ Năm Trong 365 Ngày</title>
+    <meta name="description" content="Khám phá 13.8 tỷ năm lịch sử vũ trụ được nén vào 365 ngày. Từ Big Bang đến nền văn minh hiện đại — tất cả chỉ trong một năm vũ trụ.">
+    <meta property="og:title" content="Nhật Ký Du Hành Thời Gian">
+    <meta property="og:description" content="13.8 Tỷ Năm Trong 365 Ngày — Lịch Vũ Trụ của Carl Sagan">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/scale.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <!-- ====== QUICK NAVIGATION ====== -->
+    <nav id="quick-nav" class="quick-nav" aria-label="Điều hướng nhanh">
+        <button class="nav-dot active" data-target="hero" title="Mở đầu">
+            <span class="nav-dot-inner"></span>
+            <span class="nav-label">Mở đầu</span>
+        </button>
+        <button class="nav-dot" data-target="scale" title="Quy đổi thời gian">
+            <span class="nav-dot-inner"></span>
+            <span class="nav-label">Quy đổi</span>
+        </button>
+        <button class="nav-dot" data-target="phase1" title="Tháng 1–8">
+            <span class="nav-dot-inner"></span>
+            <span class="nav-label">Tháng 1–8</span>
+        </button>
+        <button class="nav-dot" data-target="phase2" title="Tháng 9–12">
+            <span class="nav-dot-inner"></span>
+            <span class="nav-label">Tháng 9–12</span>
+        </button>
+        <button class="nav-dot" data-target="phase3" title="Đêm Giao Thừa">
+            <span class="nav-dot-inner"></span>
+            <span class="nav-label">Giao Thừa</span>
+        </button>
+        <button class="nav-dot" data-target="footer" title="Thông điệp">
+            <span class="nav-dot-inner"></span>
+            <span class="nav-label">Thông điệp</span>
+        </button>
+    </nav>
+
+    <!-- ====== SECTION 1: HERO — "Vụ Nổ Đầu Tiên" ====== -->
+    <section id="hero" class="hero-section">
+        <canvas id="bigbang-canvas" class="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-singularity" id="singularity">
+                <div class="singularity-glow"></div>
+            </div>
+            <h1 class="hero-title" id="hero-title">
+                <span class="title-line title-line-1">Nhật Ký Du Hành</span>
+                <span class="title-line title-line-2">Thời Gian</span>
+                <span class="title-sub">13.8 Tỷ Năm Trong 365 Ngày</span>
+            </h1>
+            <button class="hero-cta" id="hero-cta">
+                <span class="cta-text">Bắt đầu hành trình</span>
+                <span class="cta-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </button>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span class="scroll-text">Cuộn để khám phá</span>
+            <div class="scroll-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SECTION 2: SCALE DASHBOARD — "Bảng Quy Đổi" ====== -->
+    <section id="scale" class="scale-section">
+        <div class="scale-container">
+            <h2 class="section-heading">
+                <span class="heading-accent">Quy Đổi</span>
+                <span>Thời Gian Vũ Trụ</span>
+            </h2>
+            <p class="scale-intro">
+                Nếu toàn bộ lịch sử <strong>13.8 tỷ năm</strong> của vũ trụ được nén vào đúng
+                <strong>một năm dương lịch</strong>, thì...
+            </p>
+            <div class="scale-grid">
+                <div class="scale-card" id="scale-card-1">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+                            <circle cx="24" cy="24" r="3" fill="#f59e0b"/>
+                            <circle cx="12" cy="14" r="1.5" fill="#60a5fa" opacity="0.7"/>
+                            <circle cx="36" cy="18" r="1" fill="#c084fc" opacity="0.6"/>
+                            <circle cx="30" cy="36" r="1.5" fill="#34d399" opacity="0.7"/>
+                            <circle cx="16" cy="34" r="1" fill="#f472b6" opacity="0.5"/>
+                            <defs><linearGradient id="grad1" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#f59e0b"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                        </svg>
+                    </div>
+                    <div class="card-cosmic">
+                        <span class="cosmic-value">1</span>
+                        <span class="cosmic-unit">Năm Vũ Trụ</span>
+                    </div>
+                    <div class="card-equals">=</div>
+                    <div class="card-real">
+                        <span class="real-number" data-target="13.8" data-decimals="1">0</span>
+                        <span class="real-unit">Tỷ Năm Thực Tế</span>
+                    </div>
+                </div>
+
+                <div class="scale-card" id="scale-card-2">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="6" width="32" height="36" rx="4" stroke="#60a5fa" stroke-width="2" opacity="0.5"/>
+                            <line x1="8" y1="16" x2="40" y2="16" stroke="#60a5fa" stroke-width="1.5" opacity="0.3"/>
+                            <circle cx="16" cy="24" r="2" fill="#f59e0b" opacity="0.6"/>
+                            <circle cx="24" cy="24" r="2" fill="#60a5fa" opacity="0.6"/>
+                            <circle cx="32" cy="24" r="2" fill="#c084fc" opacity="0.6"/>
+                            <circle cx="16" cy="32" r="2" fill="#34d399" opacity="0.6"/>
+                            <circle cx="24" cy="32" r="2" fill="#f472b6" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <div class="card-cosmic">
+                        <span class="cosmic-value">1</span>
+                        <span class="cosmic-unit">Tháng Vũ Trụ</span>
+                    </div>
+                    <div class="card-equals">≈</div>
+                    <div class="card-real">
+                        <span class="real-number" data-target="1.15" data-decimals="2">0</span>
+                        <span class="real-unit">Tỷ Năm Thực Tế</span>
+                    </div>
+                </div>
+
+                <div class="scale-card" id="scale-card-3">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="18" stroke="#c084fc" stroke-width="2" opacity="0.5"/>
+                            <line x1="24" y1="24" x2="24" y2="12" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="24" y1="24" x2="32" y2="28" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+                            <circle cx="24" cy="24" r="2" fill="#f59e0b"/>
+                        </svg>
+                    </div>
+                    <div class="card-cosmic">
+                        <span class="cosmic-value">1</span>
+                        <span class="cosmic-unit">Giây Vũ Trụ</span>
+                    </div>
+                    <div class="card-equals">≈</div>
+                    <div class="card-real">
+                        <span class="real-number" data-target="438" data-decimals="0">0</span>
+                        <span class="real-unit">Năm Thực Tế</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SECTION 3A: PHASE 1 — Quá Khứ Xa Xôi (Tháng 1–8, Vertical Scroll) ====== -->
+    <section id="phase1" class="timeline-phase phase1-section">
+        <div class="phase-header">
+            <span class="phase-tag">Giai đoạn 1</span>
+            <h2 class="phase-title">Quá Khứ Xa Xôi</h2>
+            <span class="phase-months">Tháng 1 — Tháng 8</span>
+        </div>
+        <div class="vertical-timeline" id="vertical-timeline-phase1">
+            <!-- Dynamically populated by timeline.js -->
+        </div>
+    </section>
+
+    <!-- ====== SECTION 3B: PHASE 2 — Hệ Mặt Trời & Sự Sống (Tháng 9–12, Vertical Z-shape) ====== -->
+    <section id="phase2" class="timeline-phase phase2-section">
+        <div class="phase-header">
+            <span class="phase-tag">Giai đoạn 2</span>
+            <h2 class="phase-title">Hệ Mặt Trời & Sự Sống</h2>
+            <span class="phase-months">Tháng 9 — Tháng 12</span>
+        </div>
+        <div class="vertical-timeline" id="vertical-timeline">
+            <!-- Dynamically populated by timeline.js -->
+        </div>
+    </section>
+
+    <!-- ====== SECTION 3C: PHASE 3 — Đêm Giao Thừa (Ngày 31/12, Vertical Scroll) ====== -->
+    <section id="phase3" class="timeline-phase phase3-section">
+        <div class="phase-header phase-header--giaothua">
+            <span class="phase-tag">Giai đoạn 3</span>
+            <h2 class="phase-title">Đêm Giao Thừa Lịch Sử</h2>
+            <span class="phase-months">Ngày 31 Tháng 12 — Lịch Sử Loài Người</span>
+        </div>
+        <div class="vertical-timeline" id="vertical-timeline-phase3">
+            <!-- Dynamically populated by timeline.js -->
+        </div>
+    </section>
+
+    <!-- ====== SECTION 4: FOOTER — "Thông Điệp Vũ Trụ" ====== -->
+    <footer id="footer" class="footer-section">
+        <div class="footer-starfield" id="footer-starfield"></div>
+        <div class="footer-content">
+            <blockquote class="sagan-quote">
+                <div class="quote-mark">"</div>
+                <p class="quote-text">
+                    Chúng ta đều được làm từ bụi sao.<br>
+                    Vũ trụ đang tự khám phá chính mình thông qua chúng ta.
+                </p>
+                <cite class="quote-cite">— Carl Sagan, <em>Cosmos</em></cite>
+            </blockquote>
+            <div class="footer-divider"></div>
+            <div class="footer-message">
+                <p>Toàn bộ lịch sử văn minh nhân loại chỉ chiếm <strong>vài giây cuối cùng</strong> trong năm vũ trụ.</p>
+                <p class="footer-cta-text">Hãy trân trọng từng khoảnh khắc.</p>
+            </div>
+            <div class="footer-credits">
+                <p>Lấy cảm hứng từ <strong>Lịch Vũ Trụ (Cosmic Calendar)</strong> của Carl Sagan</p>
+                <p class="footer-year">Nhật Ký Du Hành Thời Gian <br> Đặng Anh Khoa <br> Nay Gia Mi<br>Đặng Văn Kiệt</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- App Modules -->
+    <script src="js/data.js"></script>
+    <script src="js/bigbang.js"></script>
+    <script src="js/scale.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* ============================================================
+   HERO.CSS — Hero Section ("Vụ Nổ Đầu Tiên")
+   ============================================================ */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--bg-void);
+}
+
+.hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-canvas);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: var(--z-hero-content);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* Singular Point (Before Big Bang) */
+.hero-singularity {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform var(--transition-slow), opacity var(--transition-slow);
+    box-shadow: 0 0 20px 5px #ffffff, 0 0 40px 10px rgba(255, 255, 255, 0.8), 0 0 80px 20px rgba(96, 165, 250, 0.5);
+    animation: singularityPulse 2s ease-in-out infinite alternate;
+}
+
+.singularity-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.15) 0%, rgba(139, 92, 246, 0.05) 50%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+    animation: glowPulse 4s ease-in-out infinite alternate;
+}
+
+/* Hero Title */
+.hero-title {
+    margin-bottom: 2.5rem;
+    pointer-events: none;
+}
+
+.title-line {
+    display: block;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.title-line-1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-line-2 {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(245, 158, 11, 0.2);
+    margin-top: -0.5rem;
+}
+
+.title-sub {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: clamp(0.9rem, 2vw, 1.25rem);
+    color: var(--text-secondary);
+    letter-spacing: 0.15em;
+    margin-top: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+/* Call To Action Button */
+.hero-cta {
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 50px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 0 12px rgba(245, 158, 11, 0.1);
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.hero-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent, 
+        rgba(245, 158, 11, 0.3), 
+        rgba(139, 92, 246, 0.3), 
+        transparent 60%
+    );
+    animation: rotateBorder 4s linear infinite;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hero-cta:hover {
+    color: var(--accent-gold-bright);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.4), inset 0 0 8px rgba(245, 158, 11, 0.2);
+    transform: scale(1.05) translateY(-2px);
+}
+
+.hero-cta:hover::before {
+    opacity: 1;
+}
+
+.cta-text {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+    transition: transform var(--transition-fast);
+}
+
+.hero-cta:hover .cta-icon {
+    transform: translateX(4px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.scroll-text {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.scroll-arrow {
+    animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+/* State changes on explosion */
+body.hero-exploded .hero-singularity {
+    pointer-events: none;
+}
+
+/* ---- Keyframes ---- */
+@keyframes singularityPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 20px 4px rgba(255, 255, 255, 0.8), 0 0 40px 8px rgba(255, 255, 255, 0.6), 0 0 80px 16px rgba(96, 165, 250, 0.3);
+    }
+    100% {
+        transform: scale(1.3);
+        box-shadow: 0 0 35px 8px rgba(255, 255, 255, 1), 0 0 60px 15px rgba(255, 255, 255, 0.9), 0 0 110px 25px rgba(96, 165, 250, 0.5);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        width: 150px;
+        height: 150px;
+        opacity: 0.7;
+    }
+    100% {
+        width: 250px;
+        height: 250px;
+        opacity: 1;
+    }
+}
+
+@keyframes rotateBorder {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+    .title-line-1 {
+        font-size: 2.2rem;
+    }
+    .title-line-2 {
+        font-size: 2.8rem;
+    }
+    .hero-cta {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+}
