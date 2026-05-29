@@ -51,7 +51,8 @@ const TIMELINE_DATA = {
             realYear: "8.8 tỷ năm trước",
             description: "Đĩa của Dải Ngân Hà hình thành.",
             icon: "💫",
-            color: "#818cf8"
+            color: "#818cf8",
+            image: "assets/images/milky_way_disk.png"
         }
     ],
 
@@ -74,7 +75,8 @@ const TIMELINE_DATA = {
             realYear: "4.4 tỷ năm trước",
             description: "Viên đá cổ nhất được tìm thấy trên Trái Đất.",
             icon: "🪨",
-            side: "right"
+            side: "right",
+            image: "assets/images/oldest_rock.png"
         },
         {
             month: 9, day: 14,
@@ -112,7 +114,8 @@ const TIMELINE_DATA = {
             description: "Oxy bắt đầu xuất hiện trong bầu khí quyển Trái Đất.",
             icon: "💨",
             side: "right",
-            color: "#60a5fa"
+            color: "#60a5fa",
+            image: "assets/images/atmosphere_oxygen.png"
         },
         {
             month: 11, day: 9,
@@ -121,7 +124,8 @@ const TIMELINE_DATA = {
             description: "Các tế bào phức tạp (Sinh vật nhân thực) xuất hiện.",
             icon: "🦠",
             side: "left",
-            color: "#a78bfa"
+            color: "#a78bfa",
+            image: "assets/images/complex_cell.png"
         },
         {
             month: 12, day: 5,
@@ -146,7 +150,8 @@ const TIMELINE_DATA = {
             realYear: "550 triệu năm trước",
             description: "Tổ tiên của các loài côn trùng, nhện.",
             icon: "🕷️",
-            side: "right"
+            side: "right",
+            image: "assets/images/trilobites.png"
         },
         {
             month: 12, day: 17,
