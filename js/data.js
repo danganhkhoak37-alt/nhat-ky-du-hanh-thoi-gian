@@ -85,7 +85,8 @@ const TIMELINE_DATA = {
             description: "Tàn dư của sự sống được tìm thấy trong hòn đá cổ tại Tây Úc.",
             icon: "🦠",
             side: "left",
-            color: "#60a5fa"
+            color: "#60a5fa",
+            image: "assets/images/life_remnants.png"
         },
         {
             month: 9, day: 21,
@@ -134,7 +135,8 @@ const TIMELINE_DATA = {
             description: "Dạng sống đa bào đầu tiên.",
             icon: "🐚",
             side: "right",
-            color: "#ec4899"
+            color: "#ec4899",
+            image: "assets/images/multicellular_organisms.png"
         },
         {
             month: 12, day: 7,
@@ -142,7 +144,8 @@ const TIMELINE_DATA = {
             realYear: "670 triệu năm trước",
             description: "Sự xuất hiện của các động vật đơn giản.",
             icon: "🪱",
-            side: "left"
+            side: "left",
+            image: "assets/images/simple_animals.png"
         },
         {
             month: 12, day: 14,
@@ -159,7 +162,8 @@ const TIMELINE_DATA = {
             realYear: "500 triệu năm trước",
             description: "Cá và các loài cá lưỡng cư đầu tiên xuất hiện.",
             icon: "🐟",
-            side: "left"
+            side: "left",
+            image: "assets/images/fish_amphibians.png"
         },
         {
             month: 12, day: 20,
@@ -168,7 +172,8 @@ const TIMELINE_DATA = {
             description: "Thực vật bắt đầu chinh phục đất liền.",
             icon: "🌱",
             side: "right",
-            color: "#10b981"
+            color: "#10b981",
+            image: "assets/images/land_plants.png"
         },
         {
             month: 12, day: 21,
@@ -176,7 +181,8 @@ const TIMELINE_DATA = {
             realYear: "400 triệu năm trước",
             description: "Sự xuất hiện của côn trùng và các loại hạt.",
             icon: "🪲",
-            side: "left"
+            side: "left",
+            image: "assets/images/insects_seeds.png"
         },
         {
             month: 12, day: 22,
@@ -185,7 +191,8 @@ const TIMELINE_DATA = {
             description: "Động vật lưỡng cư bắt đầu bò lên bờ.",
             icon: "🐸",
             side: "right",
-            color: "#f59e0b"
+            color: "#f59e0b",
+            image: "assets/images/amphibians.png"
         },
         {
             month: 12, day: 23,
@@ -193,7 +200,8 @@ const TIMELINE_DATA = {
             realYear: "300 triệu năm trước",
             description: "Sự xuất hiện của động vật bò sát.",
             icon: "🦎",
-            side: "left"
+            side: "left",
+            image: "assets/images/reptiles.png"
         },
         {
             month: 12, day: 24,
@@ -229,7 +237,8 @@ const TIMELINE_DATA = {
             realYear: "150 triệu năm trước",
             description: "Các loài chim đầu tiên xuất hiện.",
             icon: "🦅",
-            side: "left"
+            side: "left",
+            image: "assets/images/birds.png"
         },
         {
             month: 12, day: 28,
@@ -238,7 +247,8 @@ const TIMELINE_DATA = {
             description: "Thực vật có hoa bắt đầu tô điểm cho Trái Đất.",
             icon: "🌸",
             side: "right",
-            color: "#ec4899"
+            color: "#ec4899",
+            image: "assets/images/flowers.png"
         },
         {
             month: 12, day: 30,
@@ -262,7 +272,8 @@ const TIMELINE_DATA = {
             realYear: "15 triệu năm trước",
             description: "Tổ tiên chung phân nhánh tạo ra liên họ Người.",
             icon: "🦧",
-            color: "#f59e0b"
+            color: "#f59e0b",
+            image: "assets/images/hominoidea.png"
         },
         {
             time: "14:24:00",
@@ -271,7 +282,8 @@ const TIMELINE_DATA = {
             realYear: "12.3 triệu năm trước",
             description: "Sự xuất hiện của họ Người (Hominidae).",
             icon: "🚶",
-            color: "#ff6b35"
+            color: "#ff6b35",
+            image: "assets/images/hominidae.png"
         },
         {
             time: "22:24:00",
@@ -280,7 +292,8 @@ const TIMELINE_DATA = {
             realYear: "2.5 triệu năm trước",
             description: "Người nguyên thủy bắt đầu sử dụng công cụ bằng đá.",
             icon: "🪨",
-            color: "#60a5fa"
+            color: "#60a5fa",
+            image: "assets/images/early_humans_stone_tools.png"
         },
         {
             time: "23:44:00",
@@ -339,7 +352,8 @@ const TIMELINE_DATA = {
             realYear: "12,000 năm trước",
             description: "Kết thúc Kỷ Băng hà.",
             icon: "🌊",
-            color: "#3b82f6"
+            color: "#3b82f6",
+            image: "assets/images/end_of_ice_age.png"
         },
         {
             time: "23:59:46",
@@ -348,7 +362,8 @@ const TIMELINE_DATA = {
             realYear: "6,000 năm trước",
             description: "Con người bước vào Thời đại đồ đồng đá.",
             icon: "⚒️",
-            color: "#8b5cf6"
+            color: "#8b5cf6",
+            image: "assets/images/chalcolithic_age.png"
         },
         {
             time: "23:59:47",
@@ -357,7 +372,8 @@ const TIMELINE_DATA = {
             realYear: "5,500 năm trước",
             description: "Thời đại đồ đồng sớm, chữ viết tiền ký tự xuất hiện.",
             icon: "✍️",
-            color: "#f59e0b"
+            color: "#f59e0b",
+            image: "assets/images/proto_writing.png"
         },
         {
             time: "23:59:48",
@@ -376,7 +392,8 @@ const TIMELINE_DATA = {
             realYear: "4,500 năm trước",
             description: "Sự xuất hiện của bảng chữ cái, bánh xe, và Đế quốc Akkad.",
             icon: "🛞",
-            color: "#f97316"
+            color: "#f97316",
+            image: "assets/images/alphabet_wheel.png"
         },
         {
             time: "23:59:51",
@@ -385,7 +402,8 @@ const TIMELINE_DATA = {
             realYear: "4,000 năm trước",
             description: "Bộ luật Hammurabi, Trung Vương quốc Ai Cập.",
             icon: "📜",
-            color: "#d946ef"
+            color: "#d946ef",
+            image: "assets/images/code_of_hammurabi.png"
         },
         {
             time: "23:59:53",
@@ -394,7 +412,8 @@ const TIMELINE_DATA = {
             realYear: "3,000 năm trước",
             description: "Thời đại đồ sắt bắt đầu, giai đoạn Cổ đại Hy-La.",
             icon: "⚔️",
-            color: "#64748b"
+            color: "#64748b",
+            image: "assets/images/iron_age.png"
         },
         {
             time: "23:59:54",
@@ -403,7 +422,8 @@ const TIMELINE_DATA = {
             realYear: "2,500 năm trước",
             description: "Tất-đạt-đa, Khổng Tử, Đế chế Ashoka, hình học Euclid, vật lý Archimedes.",
             icon: "☸️",
-            color: "#14b8a6"
+            color: "#14b8a6",
+            image: "assets/images/philosophy_math.png"
         },
         {
             time: "23:59:55",
@@ -412,7 +432,8 @@ const TIMELINE_DATA = {
             realYear: "2,000 năm trước",
             description: "Đế quốc La Mã, Chúa Giê-su, phát minh ra số 0.",
             icon: "🏛️",
-            color: "#ef4444"
+            color: "#ef4444",
+            image: "assets/images/roman_empire.png"
         },
         {
             time: "23:59:56",
@@ -421,7 +442,8 @@ const TIMELINE_DATA = {
             realYear: "1,500 năm trước",
             description: "Muhammad, nền Văn minh Maya, Nhà Tống.",
             icon: "🕌",
-            color: "#0ea5e9"
+            color: "#0ea5e9",
+            image: "assets/images/maya_song_dynasty.png"
         },
         {
             time: "23:59:58",
@@ -430,7 +452,8 @@ const TIMELINE_DATA = {
             realYear: "1,000 năm trước",
             description: "Đế quốc Mông Cổ, Thập tự chinh, Columbus khám phá châu Mỹ, Phục Hưng.",
             icon: "⛵",
-            color: "#a855f7"
+            color: "#a855f7",
+            image: "assets/images/crusades_renaissance.png"
         },
         {
             time: "23:59:59",
@@ -440,6 +463,7 @@ const TIMELINE_DATA = {
             description: "Tất cả lịch sử hiện đại gói gọn trong giây cuối cùng trước hiện tại.",
             icon: "🚀",
             color: "#fbbf24",
+            image: "assets/images/modern_history.png",
             isLastSecond: true,
             subEvents: [
                 { label: "Phục Hưng", year: "thế kỷ 15" },

@@ -79,10 +79,11 @@ const Timeline = (function () {
             eventEl.style.setProperty('--accent-color', event.color || '#f59e0b');
 
             const dateLabel = `${MONTH_NAMES[event.month - 1]}, Ngày ${event.day}`;
+            const imageSrc = event.image || generateHistoricalSVG(event) || generateCosmicSVG(event, i);
 
             eventEl.innerHTML = `
                 <div class="event-slide-image">
-                    <img src="${event.image}" alt="${event.title}" class="event-slide-img">
+                    <img src="${imageSrc}" alt="${event.title}" class="event-slide-img">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="event-slide-content">
@@ -135,10 +136,11 @@ const Timeline = (function () {
             eventEl.style.setProperty('--accent-color', event.color || '#3b82f6');
 
             const dateLabel = `${MONTH_NAMES[event.month - 1]}, Ngày ${event.day}`;
+            const imageSrc = event.image || generateHistoricalSVG(event) || generateCosmicSVG(event, i);
 
             eventEl.innerHTML = `
                 <div class="event-slide-image">
-                    <img src="${event.image}" alt="${event.title}" class="event-slide-img">
+                    <img src="${imageSrc}" alt="${event.title}" class="event-slide-img">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="event-slide-content">
@@ -204,9 +206,11 @@ const Timeline = (function () {
                 `;
             }
 
+            const imageSrc = event.image || generateHistoricalSVG(event) || generateCosmicSVG(event, i);
+
             eventEl.innerHTML = `
                 <div class="event-slide-image">
-                    <img src="${event.image}" alt="${event.title}" class="event-slide-img">
+                    <img src="${imageSrc}" alt="${event.title}" class="event-slide-img">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="event-slide-content">
