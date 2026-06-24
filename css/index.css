@@ -93,19 +93,10 @@ body {
     min-height: 100vh;
 }
 
-/* Scrollbar Styling */
+/* Scrollbar hidden (uses default browser scrollbar) */
 ::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    background: var(--bg-void);
-}
-::-webkit-scrollbar-thumb {
-    background: var(--accent-purple);
-    border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-purple-light);
+    width: 0px;
+    background: transparent;
 }
 
 /* Particles Background */
