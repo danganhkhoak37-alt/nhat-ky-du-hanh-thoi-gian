@@ -40,9 +40,9 @@
     --gradient-nebula: linear-gradient(135deg, #1e1b4b, #312e81, #3b0764);
 
     /* Typography */
-    --font-display: 'Orbitron', sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
-    --font-mono: 'Space Mono', monospace;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'EB Garamond', serif;
+    --font-mono: 'Courier Prime', monospace;
 
     /* Sizing */
     --section-padding: clamp(2rem, 5vw, 6rem);
