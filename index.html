@@ -17,8 +17,33 @@
     <link rel="stylesheet" href="css/scale.css">
     <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
+    <!-- ====== HEADER ====== -->
+    <header id="main-header" class="main-header">
+        <div class="header-logo" onclick="document.getElementById('hero').scrollIntoView({behavior: 'smooth'})">
+            <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" stroke="url(#logo-grad)" stroke-width="4" stroke-dasharray="60 20"/>
+                <circle cx="50" cy="50" r="25" stroke="#c084fc" stroke-width="2" opacity="0.8"/>
+                <circle cx="50" cy="50" r="10" fill="#60a5fa"/>
+                <path d="M50 20 L50 50 L70 70" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                    <linearGradient id="logo-grad" x1="0" y1="0" x2="100" y2="100">
+                        <stop offset="0%" stop-color="#60a5fa"/>
+                        <stop offset="100%" stop-color="#f472b6"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span class="logo-text">Nhật Ký Du Hành</span>
+        </div>
+        <nav class="header-nav">
+            <button class="header-tab" data-target="phase1">Giai đoạn 1</button>
+            <button class="header-tab" data-target="phase2">Giai đoạn 2</button>
+            <button class="header-tab" data-target="phase3">Giai đoạn 3</button>
+        </nav>
+    </header>
+
     <!-- Particles Background -->
     <div id="particles-js"></div>
 

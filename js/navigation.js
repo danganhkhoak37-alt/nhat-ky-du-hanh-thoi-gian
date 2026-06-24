@@ -7,7 +7,7 @@ const QuickNav = (function () {
 
     function initNavigation() {
         const quickNavContainer = document.getElementById('quick-nav');
-        const dots = document.querySelectorAll('.nav-dot');
+        const dots = document.querySelectorAll('.nav-dot, .header-tab');
 
         if (!quickNavContainer || dots.length === 0) return;
 
