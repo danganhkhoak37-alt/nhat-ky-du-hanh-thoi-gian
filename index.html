@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
     <!-- ====== QUICK NAVIGATION ====== -->
     <nav id="quick-nav" class="quick-nav" aria-label="Điều hướng nhanh">
@@ -223,11 +225,28 @@
         </div>
     </footer>
 
+    <!-- Scroll Progress Spaceship -->
+    <div id="scroll-progress-container">
+        <div id="scroll-line"></div>
+        <div id="scroll-spaceship">🚀</div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Phóng to">
+        <div id="lightbox-caption"></div>
+    </div>
+
     <!-- ====== SCRIPTS ====== -->
     <!-- GSAP + ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
 
     <!-- App Modules -->
     <script src="js/data.js"></script>

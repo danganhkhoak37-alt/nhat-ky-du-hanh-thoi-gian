@@ -209,12 +209,65 @@
         });
     }
 
+    // ---- Spaceship Scroll Progress ---- //
+    function setupSpaceshipProgress() {
+        const spaceship = document.getElementById('scroll-spaceship');
+        if (!spaceship) return;
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) - window.innerHeight;
+            let scrollPercent = 0;
+            if (docHeight > 0) {
+                scrollPercent = scrollTop / docHeight;
+            }
+            spaceship.style.top = `${scrollPercent * 100}%`;
+        }, { passive: true });
+    }
+
+    // ---- Lightbox Modal ---- //
+    function setupLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        const modalImg = document.getElementById('lightbox-img');
+        const captionText = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        if (!modal || !modalImg || !closeBtn) return;
+
+        document.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('event-slide-img')) {
+                modal.style.display = 'block';
+                modalImg.src = e.target.src;
+                
+                const container = e.target.closest('.event-slide') || e.target.closest('.sub-event-item');
+                let title = '';
+                if (container) {
+                    const titleEl = container.querySelector('.event-slide-title') || container.querySelector('.sub-event-title');
+                    if (titleEl) title = titleEl.innerText;
+                }
+                captionText.innerHTML = title;
+            }
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    }
+
     // ---- Initialize Everything ---- //
     function init() {
         handleMobile();
         setupHero();
         setupBackgroundTransitions();
         setupFooterStars();
+        setupSpaceshipProgress();
+        setupLightbox();
 
         // Initialize modules (order matters — data.js loaded first)
         if (window.BigBang && window.BigBang.init) {
