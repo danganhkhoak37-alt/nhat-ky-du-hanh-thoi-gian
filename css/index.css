@@ -40,9 +40,9 @@
     --gradient-nebula: linear-gradient(135deg, #1e1b4b, #312e81, #3b0764);
 
     /* Typography */
-    --font-display: 'Cinzel', serif;
-    --font-body: 'EB Garamond', serif;
-    --font-mono: 'Courier Prime', monospace;
+    --font-display: 'Times New Roman', Times, serif;
+    --font-body: 'Times New Roman', Times, serif;
+    --font-mono: 'Times New Roman', Times, serif;
 
     /* Sizing */
     --section-padding: clamp(2rem, 5vw, 6rem);
