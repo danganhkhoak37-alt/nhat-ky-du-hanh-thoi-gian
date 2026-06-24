@@ -209,21 +209,7 @@
         });
     }
 
-    // ---- Spaceship Scroll Progress ---- //
-    function setupSpaceshipProgress() {
-        const spaceship = document.getElementById('scroll-spaceship');
-        if (!spaceship) return;
 
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight) - window.innerHeight;
-            let scrollPercent = 0;
-            if (docHeight > 0) {
-                scrollPercent = scrollTop / docHeight;
-            }
-            spaceship.style.top = `${scrollPercent * 100}%`;
-        }, { passive: true });
-    }
 
     // ---- Lightbox Modal ---- //
     function setupLightbox() {
@@ -266,7 +252,7 @@
         setupHero();
         setupBackgroundTransitions();
         setupFooterStars();
-        setupSpaceshipProgress();
+
         setupLightbox();
 
         // Initialize modules (order matters — data.js loaded first)

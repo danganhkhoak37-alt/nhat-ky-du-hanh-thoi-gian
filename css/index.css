@@ -324,35 +324,7 @@ button {
     }
 }
 
-/* ============================================================
-   SPACESHIP PROGRESS BAR
-   ============================================================ */
-#scroll-progress-container {
-    position: fixed;
-    top: 0;
-    right: 15px;
-    width: 2px;
-    height: 100vh;
-    z-index: 999;
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-#scroll-line {
-    display: none;
-}
-
-#scroll-spaceship {
-    position: absolute;
-    top: 0;
-    font-size: 20px;
-    transform: translateX(-50%) translateY(-50%) rotate(180deg);
-    text-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
-    transition: top 0.1s ease-out;
-    left: 1px;
-}
 
 /* ============================================================
    LIGHTBOX MODAL
