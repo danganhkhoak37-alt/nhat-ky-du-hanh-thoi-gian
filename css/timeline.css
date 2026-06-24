@@ -324,23 +324,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
-    max-height: 220px;
-    overflow-y: auto;
-    padding-right: 0.5rem;
+    overflow: visible;
+    padding-right: 0;
 }
 
-/* Custom scrollbar cho danh sách phụ */
+/* Hide all scrollbars inside sub-events-list */
 .sub-events-list::-webkit-scrollbar {
-    width: 4px;
-}
-
-.sub-events-list::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.1);
-}
-
-.sub-events-list::-webkit-scrollbar-thumb {
-    background: rgba(255,255,255,0.1);
-    border-radius: 2px;
+    display: none;
 }
 
 .sub-event-item {
@@ -394,7 +384,7 @@
         padding: 2.5rem 2rem !important;
         align-items: flex-start !important;
         justify-content: flex-start !important;
-        overflow-y: auto;
+        overflow: hidden;
     }
 
     .event-slide-content-inner {
