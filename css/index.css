@@ -341,11 +341,7 @@ button {
 }
 
 #scroll-line {
-    position: absolute;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.1);
+    display: none;
 }
 
 #scroll-spaceship {
